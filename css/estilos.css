@@ -72,15 +72,77 @@ h2{
 .categoria a:hover {
     background-color:blue;
     color:white;
-    border-radius:0 0 1rem 0 ;/*border-botton-right-radius:1 rem*/
+    border-radius:0 0 1rem 0 ;  /*border-botton-right-radius:1 rem*/
+}
+
+/* Nosotros*/
+#nosotros{
+    display:grid;
+    grid-template-columns: 1fr 1fr;
+    
+}
+
+#nosotros img{
+    object-fit: cover;
+    height: 100%;
+}
+
+.nosotros-fondo{
+    background-color: blue;
+    /*grid-column-start: 2;*/
+}
+
+
+
+.texto-nosotros {
+
+    color:white;
+    padding: 6rem;
+    font-size: 1.6rem;
+
+}
+
+.texto-nosotros h2 {
+    margin-bottom: 4rem;
+    text-align: left;
+
+}
+
+.texto-nosotros p{
+
+    padding-right: 4rem;
+}
+/*Productos*/
+
+.texto-producto{
+    background-color: blue;
+    color: white;
+     padding: 2rem;
+}
+
+.precio{
+
+    font-size: 2rem;
+    font-weight: 900;
+    text-align: center;
+}
+
+.boton{
+
+    background-color: #8cbc00;
+    display:block;
+    
 }
 
 img{
     display:block; /*quitar linea blanca entre la letra y la foto */
     max-width: 100%;
+   
 }
 
 @media (width<400px) {
+    /*este media query activa los estilos que hay dentro cuando se cumple la condicion en este caso que el ancho de pantalla
+    sea inferior a 400 px*/
 
     .listado-categorias{
         flex-wrap: wrap;
@@ -89,4 +151,12 @@ img{
     .categoria{
         width: 100%;
     }
+    #nosotros{
+        grid-template-columns: 1fr;
+    }
+    
+    #nosotros img{
+        display:none;
+    }
+
 }
