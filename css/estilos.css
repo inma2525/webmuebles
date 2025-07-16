@@ -1,0 +1,92 @@
+html , * {
+
+    box-sizing: border-box; 
+    /* computa el ancho y el alto de los elementos con el margin y el borde*/
+}
+
+html {
+
+    font-size: 62.5%;
+    /*esto hace que 1 rem equivalga aprox a 10px*/
+}
+.nombre-sitio span{
+
+    color:blue;
+}
+
+h1, h2, h3 {
+    text-align: center;
+    font-family: 'raleway', sans-serif;
+}
+h1{
+    font-size: 4rem;
+}
+
+h2{
+    font-size: 3rem;
+}
+
+#menu-ppal a{
+    display:block;
+    text-decoration: none;
+    padding: 2rem;
+    font-size: 1.8rem;
+    color:black;
+}
+
+
+#menu-ppal{
+    display:flex ;
+    justify-content: space-evenly;
+    border-top: 0.2rem solid grey;
+    border-bottom:0.2rem solid grey;
+}
+
+.central{
+    max-width: 120rem;
+    margin:0 auto;/*centra con respecto a la caja*/
+}
+
+#portada {
+    background-image: url(../img/principal.jpg);
+    background-repeat: no-repeat;/*fuerza a que la imagen no se repita */
+    background-position: center center;
+    height: 50rem;
+    margin-top: 2rem;
+    background-size: cover;/*amplia la foto principal*/
+}
+
+.listado-categorias {
+    display:flex;
+    gap: 2rem;
+}
+
+.categoria a {
+    text-align:center;
+    display:block;
+    font-size: 2rem;
+    text-decoration: none;
+    padding: 2 rem;
+}
+
+.categoria a:hover {
+    background-color:blue;
+    color:white;
+    border-radius:0 0 1rem 0 ;/*border-botton-right-radius:1 rem*/
+}
+
+img{
+    display:block; /*quitar linea blanca entre la letra y la foto */
+    max-width: 100%;
+}
+
+@media (width<400px) {
+
+    .listado-categorias{
+        flex-wrap: wrap;
+    }
+
+    .categoria{
+        width: 100%;
+    }
+}
